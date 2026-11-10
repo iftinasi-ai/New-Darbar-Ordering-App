@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.graphics.Color
 import android.view.Gravity
 import android.widget.*
-import android.graphics.Typeface
 
 class MainActivity : Activity() {
 
@@ -15,15 +14,15 @@ class MainActivity : Activity() {
 
         val layout = LinearLayout(this)
         layout.orientation = LinearLayout.VERTICAL
-        layout.setPadding(20, 24, 20, 20)
+        layout.setPadding(20, 20, 20, 20)
         layout.setBackgroundColor(Color.rgb(245, 243, 250))
 
         val title = TextView(this)
         title.text = "NEW DARBAR"
         title.textSize = 28f
         title.setTextColor(Color.rgb(91, 44, 145))
-        title.typeface = Typeface.DEFAULT_BOLD
         title.gravity = Gravity.CENTER
+        title.setPadding(0, 20, 0, 10)
         layout.addView(title)
 
         val subtitle = TextView(this)
@@ -34,7 +33,7 @@ class MainActivity : Activity() {
 
         val heading = TextView(this)
         heading.text = "SELECT TABLE"
-        heading.textSize = 20f
+        heading.textSize = 21f
         heading.setTextColor(Color.BLACK)
         heading.setPadding(0, 30, 0, 15)
         layout.addView(heading)
@@ -66,7 +65,6 @@ class MainActivity : Activity() {
         }
 
         layout.addView(grid)
-
         setContentView(layout)
     }
 }
